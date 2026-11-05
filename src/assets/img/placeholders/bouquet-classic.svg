@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Placeholder illustration of a medium bouquet">
+  <rect width="800" height="1000" fill="#F7E7E8"/>
+  <circle cx="400" cy="420" r="336" fill="#FFF9F3"/>
+  <path transform="translate(226.948 380.5) rotate(-150)" d="M0 0 C 18 -28 52 -28 70 0 C 52 28 18 28 0 0Z" fill="#A8B5A0"/><path transform="translate(573.052 380.5) rotate(-30)" d="M0 0 C 18 -28 52 -28 70 0 C 52 28 18 28 0 0Z" fill="#A8B5A0"/><path transform="translate(284.632 257) rotate(-120)" d="M0 0 C 18 -28 52 -28 70 0 C 52 28 18 28 0 0Z" fill="#A8B5A0"/><path transform="translate(515.3679999999999 257) rotate(-60)" d="M0 0 C 18 -28 52 -28 70 0 C 52 28 18 28 0 0Z" fill="#A8B5A0"/>
+  <g transform="translate(400 342.5)">
+    <circle r="43.699999999999996" fill="#C98291"/>
+    <path d="M0 0 m-4.0641 0 a4.0641 4.0641 0 1 1 8.1282 0 a9.482899999999999 9.482899999999999 0 1 1 -18.965799999999998 0 a16.2564 16.2564 0 1 1 32.5128 0 a23.029899999999998 23.029899999999998 0 1 1 -46.059799999999996 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="3.4959999999999996" stroke-linecap="round"/>
+  </g><g transform="translate(468.4256212444743 364.19741648758225)">
+    <circle r="43.699999999999996" fill="#6F3548"/>
+    <path d="M0 0 m-4.0641 0 a4.0641 4.0641 0 1 1 8.1282 0 a9.482899999999999 9.482899999999999 0 1 1 -18.965799999999998 0 a16.2564 16.2564 0 1 1 32.5128 0 a23.029899999999998 23.029899999999998 0 1 1 -46.059799999999996 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="3.4959999999999996" stroke-linecap="round"/>
+  </g><g transform="translate(409.1587921225871 397.79245294437635)">
+    <circle r="43.699999999999996" fill="#F2D4D7"/>
+    <path d="M0 0 m-4.0641 0 a4.0641 4.0641 0 1 1 8.1282 0 a9.482899999999999 9.482899999999999 0 1 1 -18.965799999999998 0 a16.2564 16.2564 0 1 1 32.5128 0 a23.029899999999998 23.029899999999998 0 1 1 -46.059799999999996 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="3.4959999999999996" stroke-linecap="round"/>
+  </g><g transform="translate(340.7331708781128 376.0950364567941)">
+    <circle r="43.699999999999996" fill="#B5687A"/>
+    <path d="M0 0 m-4.0641 0 a4.0641 4.0641 0 1 1 8.1282 0 a9.482899999999999 9.482899999999999 0 1 1 -18.965799999999998 0 a16.2564 16.2564 0 1 1 32.5128 0 a23.029899999999998 23.029899999999998 0 1 1 -46.059799999999996 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="3.4959999999999996" stroke-linecap="round"/>
+  </g><g transform="translate(331.5743787555257 320.80258351241775)">
+    <circle r="43.699999999999996" fill="#C98291"/>
+    <path d="M0 0 m-4.0641 0 a4.0641 4.0641 0 1 1 8.1282 0 a9.482899999999999 9.482899999999999 0 1 1 -18.965799999999998 0 a16.2564 16.2564 0 1 1 32.5128 0 a23.029899999999998 23.029899999999998 0 1 1 -46.059799999999996 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="3.4959999999999996" stroke-linecap="round"/>
+  </g><g transform="translate(390.8412078774129 287.20754705562365)">
+    <circle r="43.699999999999996" fill="#E8B4BC"/>
+    <path d="M0 0 m-4.0641 0 a4.0641 4.0641 0 1 1 8.1282 0 a9.482899999999999 9.482899999999999 0 1 1 -18.965799999999998 0 a16.2564 16.2564 0 1 1 32.5128 0 a23.029899999999998 23.029899999999998 0 1 1 -46.059799999999996 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="3.4959999999999996" stroke-linecap="round"/>
+  </g><g transform="translate(459.2668291218872 308.90496354320595)">
+    <circle r="43.699999999999996" fill="#6F3548"/>
+    <path d="M0 0 m-4.0641 0 a4.0641 4.0641 0 1 1 8.1282 0 a9.482899999999999 9.482899999999999 0 1 1 -18.965799999999998 0 a16.2564 16.2564 0 1 1 32.5128 0 a23.029899999999998 23.029899999999998 0 1 1 -46.059799999999996 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="3.4959999999999996" stroke-linecap="round"/>
+  </g>
+  
+    <path d="M178.87800000000004 440.15999999999997 L621.122 440.15999999999997 L460 840 L340 840 Z" fill="#FFFFFF" stroke="#EAD8D9" stroke-width="3"/>
+    <path d="M178.87800000000004 440.15999999999997 L390 840 L340 840 Z" fill="#F7E7E8"/>
+    <path d="M330 700 q70 30 140 0 v22 q-70 30 -140 0Z" fill="#6F3548"/>
+    <path d="M400 715 l-48 52 l18 4 l30 -40 l30 40 l18 -4Z" fill="#6F3548"/>
+  <g font-family="Inter, system-ui, sans-serif" text-anchor="middle">
+    <rect x="210" y="914" width="380" height="50" rx="25" fill="#FFFFFF" stroke="#6F3548" stroke-dasharray="6 5" stroke-width="2"/>
+    <text x="400" y="946" font-size="20" font-weight="600" fill="#6F3548">Placeholder · real photo coming soon</text>
+  </g>
+</svg>

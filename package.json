@@ -1,0 +1,15 @@
+{
+  "name": "satin-ribbon-bouquets-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static storefront for a handmade satin ribbon flower bouquet business (South Africa).",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "node scripts/build.js && node scripts/serve.js",
+    "test": "node scripts/build.js && node --test tests/*.test.js"
+  }
+}

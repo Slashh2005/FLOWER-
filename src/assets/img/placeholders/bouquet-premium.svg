@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Placeholder illustration of a large bouquet">
+  <rect width="800" height="1000" fill="#F7E7E8"/>
+  <circle cx="400" cy="420" r="336" fill="#FFF9F3"/>
+  <path transform="translate(218.1712 336.79999999999995) rotate(-150)" d="M0 0 C 18 -28 52 -28 70 0 C 52 28 18 28 0 0Z" fill="#A8B5A0"/><path transform="translate(581.8288 336.79999999999995) rotate(-30)" d="M0 0 C 18 -28 52 -28 70 0 C 52 28 18 28 0 0Z" fill="#A8B5A0"/><path transform="translate(278.7808 243.2) rotate(-120)" d="M0 0 C 18 -28 52 -28 70 0 C 52 28 18 28 0 0Z" fill="#A8B5A0"/><path transform="translate(521.2192 243.2) rotate(-60)" d="M0 0 C 18 -28 52 -28 70 0 C 52 28 18 28 0 0Z" fill="#A8B5A0"/>
+  <g transform="translate(400 308)">
+    <circle r="33.12" fill="#C98291"/>
+    <path d="M0 0 m-3.08016 0 a3.08016 3.08016 0 1 1 6.16032 0 a7.187039999999999 7.187039999999999 0 1 1 -14.374079999999998 0 a12.32064 12.32064 0 1 1 24.64128 0 a17.45424 17.45424 0 1 1 -34.90848 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2.6496" stroke-linecap="round"/>
+  </g><g transform="translate(451.85941820633843 324.4443577590097)">
+    <circle r="33.12" fill="#6F3548"/>
+    <path d="M0 0 m-3.08016 0 a3.08016 3.08016 0 1 1 6.16032 0 a7.187039999999999 7.187039999999999 0 1 1 -14.374079999999998 0 a12.32064 12.32064 0 1 1 24.64128 0 a17.45424 17.45424 0 1 1 -34.90848 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2.6496" stroke-linecap="round"/>
+  </g><g transform="translate(406.9414003455397 349.9058590736326)">
+    <circle r="33.12" fill="#F2D4D7"/>
+    <path d="M0 0 m-3.08016 0 a3.08016 3.08016 0 1 1 6.16032 0 a7.187039999999999 7.187039999999999 0 1 1 -14.374079999999998 0 a12.32064 12.32064 0 1 1 24.64128 0 a17.45424 17.45424 0 1 1 -34.90848 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2.6496" stroke-linecap="round"/>
+  </g><g transform="translate(355.0819821392013 333.4615013146229)">
+    <circle r="33.12" fill="#B5687A"/>
+    <path d="M0 0 m-3.08016 0 a3.08016 3.08016 0 1 1 6.16032 0 a7.187039999999999 7.187039999999999 0 1 1 -14.374079999999998 0 a12.32064 12.32064 0 1 1 24.64128 0 a17.45424 17.45424 0 1 1 -34.90848 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2.6496" stroke-linecap="round"/>
+  </g><g transform="translate(348.14058179366157 291.5556422409903)">
+    <circle r="33.12" fill="#C98291"/>
+    <path d="M0 0 m-3.08016 0 a3.08016 3.08016 0 1 1 6.16032 0 a7.187039999999999 7.187039999999999 0 1 1 -14.374079999999998 0 a12.32064 12.32064 0 1 1 24.64128 0 a17.45424 17.45424 0 1 1 -34.90848 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2.6496" stroke-linecap="round"/>
+  </g><g transform="translate(393.0585996544603 266.0941409263674)">
+    <circle r="33.12" fill="#E8B4BC"/>
+    <path d="M0 0 m-3.08016 0 a3.08016 3.08016 0 1 1 6.16032 0 a7.187039999999999 7.187039999999999 0 1 1 -14.374079999999998 0 a12.32064 12.32064 0 1 1 24.64128 0 a17.45424 17.45424 0 1 1 -34.90848 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2.6496" stroke-linecap="round"/>
+  </g><g transform="translate(444.9180178607987 282.53849868537714)">
+    <circle r="33.12" fill="#6F3548"/>
+    <path d="M0 0 m-3.08016 0 a3.08016 3.08016 0 1 1 6.16032 0 a7.187039999999999 7.187039999999999 0 1 1 -14.374079999999998 0 a12.32064 12.32064 0 1 1 24.64128 0 a17.45424 17.45424 0 1 1 -34.90848 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2.6496" stroke-linecap="round"/>
+  </g><g transform="translate(478.4547491261656 368.58502601301007)">
+    <circle r="33.12" fill="#B5687A"/>
+    <path d="M0 0 m-3.08016 0 a3.08016 3.08016 0 1 1 6.16032 0 a7.187039999999999 7.187039999999999 0 1 1 -14.374079999999998 0 a12.32064 12.32064 0 1 1 24.64128 0 a17.45424 17.45424 0 1 1 -34.90848 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2.6496" stroke-linecap="round"/>
+  </g><g transform="translate(427.55378844878766 389.88870253851985)">
+    <circle r="33.12" fill="#C98291"/>
+    <path d="M0 0 m-3.08016 0 a3.08016 3.08016 0 1 1 6.16032 0 a7.187039999999999 7.187039999999999 0 1 1 -14.374079999999998 0 a12.32064 12.32064 0 1 1 24.64128 0 a17.45424 17.45424 0 1 1 -34.90848 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2.6496" stroke-linecap="round"/>
+  </g><g transform="translate(369.2698124081391 389.2503673496009)">
+    <circle r="33.12" fill="#E8B4BC"/>
+    <path d="M0 0 m-3.08016 0 a3.08016 3.08016 0 1 1 6.16032 0 a7.187039999999999 7.187039999999999 0 1 1 -14.374079999999998 0 a12.32064 12.32064 0 1 1 24.64128 0 a17.45424 17.45424 0 1 1 -34.90848 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2.6496" stroke-linecap="round"/>
+  </g><g transform="translate(319.21996531598654 366.8410618446242)">
+    <circle r="33.12" fill="#6F3548"/>
+    <path d="M0 0 m-3.08016 0 a3.08016 3.08016 0 1 1 6.16032 0 a7.187039999999999 7.187039999999999 0 1 1 -14.374079999999998 0 a12.32064 12.32064 0 1 1 24.64128 0 a17.45424 17.45424 0 1 1 -34.90848 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2.6496" stroke-linecap="round"/>
+  </g><g transform="translate(290.8150632819735 328.66534133659076)">
+    <circle r="33.12" fill="#F2D4D7"/>
+    <path d="M0 0 m-3.08016 0 a3.08016 3.08016 0 1 1 6.16032 0 a7.187039999999999 7.187039999999999 0 1 1 -14.374079999999998 0 a12.32064 12.32064 0 1 1 24.64128 0 a17.45424 17.45424 0 1 1 -34.90848 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2.6496" stroke-linecap="round"/>
+  </g><g transform="translate(291.6661768671989 284.9523593061043)">
+    <circle r="33.12" fill="#B5687A"/>
+    <path d="M0 0 m-3.08016 0 a3.08016 3.08016 0 1 1 6.16032 0 a7.187039999999999 7.187039999999999 0 1 1 -14.374079999999998 0 a12.32064 12.32064 0 1 1 24.64128 0 a17.45424 17.45424 0 1 1 -34.90848 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2.6496" stroke-linecap="round"/>
+  </g><g transform="translate(321.5452508738344 247.41497398698993)">
+    <circle r="33.12" fill="#C98291"/>
+    <path d="M0 0 m-3.08016 0 a3.08016 3.08016 0 1 1 6.16032 0 a7.187039999999999 7.187039999999999 0 1 1 -14.374079999999998 0 a12.32064 12.32064 0 1 1 24.64128 0 a17.45424 17.45424 0 1 1 -34.90848 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2.6496" stroke-linecap="round"/>
+  </g><g transform="translate(372.44621155121234 226.11129746148012)">
+    <circle r="33.12" fill="#E8B4BC"/>
+    <path d="M0 0 m-3.08016 0 a3.08016 3.08016 0 1 1 6.16032 0 a7.187039999999999 7.187039999999999 0 1 1 -14.374079999999998 0 a12.32064 12.32064 0 1 1 24.64128 0 a17.45424 17.45424 0 1 1 -34.90848 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2.6496" stroke-linecap="round"/>
+  </g><g transform="translate(430.73018759186084 226.74963265039915)">
+    <circle r="33.12" fill="#6F3548"/>
+    <path d="M0 0 m-3.08016 0 a3.08016 3.08016 0 1 1 6.16032 0 a7.187039999999999 7.187039999999999 0 1 1 -14.374079999999998 0 a12.32064 12.32064 0 1 1 24.64128 0 a17.45424 17.45424 0 1 1 -34.90848 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2.6496" stroke-linecap="round"/>
+  </g><g transform="translate(480.7800346840134 249.15893815537578)">
+    <circle r="33.12" fill="#F2D4D7"/>
+    <path d="M0 0 m-3.08016 0 a3.08016 3.08016 0 1 1 6.16032 0 a7.187039999999999 7.187039999999999 0 1 1 -14.374079999999998 0 a12.32064 12.32064 0 1 1 24.64128 0 a17.45424 17.45424 0 1 1 -34.90848 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2.6496" stroke-linecap="round"/>
+  </g><g transform="translate(509.1849367180265 287.33465866340924)">
+    <circle r="33.12" fill="#B5687A"/>
+    <path d="M0 0 m-3.08016 0 a3.08016 3.08016 0 1 1 6.16032 0 a7.187039999999999 7.187039999999999 0 1 1 -14.374079999999998 0 a12.32064 12.32064 0 1 1 24.64128 0 a17.45424 17.45424 0 1 1 -34.90848 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2.6496" stroke-linecap="round"/>
+  </g><g transform="translate(508.3338231328012 331.04764069389563)">
+    <circle r="33.12" fill="#C98291"/>
+    <path d="M0 0 m-3.08016 0 a3.08016 3.08016 0 1 1 6.16032 0 a7.187039999999999 7.187039999999999 0 1 1 -14.374079999999998 0 a12.32064 12.32064 0 1 1 24.64128 0 a17.45424 17.45424 0 1 1 -34.90848 0"
+      fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2.6496" stroke-linecap="round"/>
+  </g>
+  
+    <path d="M167.66320000000005 411.82399999999996 L632.3367999999999 411.82399999999996 L460 840 L340 840 Z" fill="#FFFFFF" stroke="#EAD8D9" stroke-width="3"/>
+    <path d="M167.66320000000005 411.82399999999996 L390 840 L340 840 Z" fill="#F7E7E8"/>
+    <path d="M330 700 q70 30 140 0 v22 q-70 30 -140 0Z" fill="#6F3548"/>
+    <path d="M400 715 l-48 52 l18 4 l30 -40 l30 40 l18 -4Z" fill="#6F3548"/>
+  <g font-family="Inter, system-ui, sans-serif" text-anchor="middle">
+    <rect x="210" y="914" width="380" height="50" rx="25" fill="#FFFFFF" stroke="#6F3548" stroke-dasharray="6 5" stroke-width="2"/>
+    <text x="400" y="946" font-size="20" font-weight="600" fill="#6F3548">Placeholder · real photo coming soon</text>
+  </g>
+</svg>
