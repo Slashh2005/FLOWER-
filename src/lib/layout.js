@@ -5,9 +5,9 @@ import { brandName, absoluteUrl, whatsappEnabled } from "./helpers.js";
 
 /**
  * Full HTML document.
- * @param {object} page { path, title, description, image?, body, jsonLd? }
+ * @param {object} page { path, title, description, image?, body, noindex?, bodyClass? }
  */
-export function layout({ path, title, description, image = "/assets/img/og-image.png", body, noindex = false }) {
+export function layout({ path, title, description, image = "/assets/img/og-image.png", body, noindex = false, bodyClass = "" }) {
   const fullTitle = title ? `${title} | ${brandName()}` : brandName();
   const canonical = absoluteUrl(path);
   const ogImage = absoluteUrl(image);
@@ -43,11 +43,15 @@ ${html`<html lang="en-ZA">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Parisienne&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
   <link rel="stylesheet" href="/assets/css/styles.css">
-  <script>document.documentElement.classList.add("js")</script>
+  <script>
+    // Motion gate: entrance animations only run with JS and when the visitor hasn't asked for reduced motion.
+    document.documentElement.classList.add("js");
+    if (matchMedia("(prefers-reduced-motion: no-preference)").matches) document.documentElement.classList.add("motion");
+  </script>
 </head>
-<body>
+<body class="${bodyClass}">
   ${header(path)}
   <main id="main" tabindex="-1">
     ${body}

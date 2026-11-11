@@ -31,6 +31,12 @@ const icons = {
   close: raw(
     '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>'
   ),
+  arrow: raw(
+    '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>'
+  ),
+  rose: raw(
+    '<svg class="icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="14" fill="currentColor"/><path d="M16 16m-2 0a2 2 0 1 1 4 0a5 5 0 1 1-10 0a8 8 0 1 1 16 0a10.5 10.5 0 0 1-10.5 10.5" fill="none" stroke="#FFF9F3" stroke-width="2.2" stroke-linecap="round"/></svg>'
+  ),
   check: raw(
     '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>'
   ),
@@ -71,48 +77,63 @@ export function priceTag(product) {
   </p>`;
 }
 
-export function sectionHeading({ eyebrow, title, intro, id, level = 2, align = "center" }) {
+/**
+ * Section heading. `script` adds a large handwritten accent line (decorative;
+ * hidden from screen readers so headings read cleanly).
+ */
+export function sectionHeading({ eyebrow, title, script, intro, id, level = 2, align = "center", tone = "" }) {
   const tag = `h${level}`;
-  return html`<header class="section-heading section-heading--${align}">
+  return html`<header class="section-heading section-heading--${align} ${tone}" data-reveal>
     ${eyebrow ? html`<p class="eyebrow">${eyebrow}</p>` : ""}
-    ${raw(`<${tag}${id ? ` id="${id}"` : ""}>`)}${title}${raw(`</${tag}>`)}
+    ${raw(`<${tag}${id ? ` id="${id}"` : ""} class="display">`)}${title}${raw(`</${tag}>`)}
+    ${script ? html`<p class="script section-heading__script" aria-hidden="true">${script}</p>` : ""}
     ${intro ? html`<p class="section-heading__intro">${intro}</p>` : ""}
   </header>`;
 }
 
+/** Big banded page header used on inner pages. */
+export function pageHero({ eyebrow, title, script, intro, tone = "petal" }) {
+  return html`<section class="page-hero page-hero--${tone}">
+    <div class="container">
+      ${eyebrow ? html`<p class="eyebrow" data-reveal>${eyebrow}</p>` : ""}
+      <h1 class="page-hero__title" data-reveal>${title}</h1>
+      ${script ? html`<p class="script page-hero__script" aria-hidden="true" data-reveal>${script}</p>` : ""}
+      ${intro ? html`<p class="page-hero__intro" data-reveal>${intro}</p>` : ""}
+    </div>
+  </section>`;
+}
+
 /** Responsive <img>. `img.srcset` (optional) lets real photos ship several sizes. */
-export function image(img, { eager = false, sizes = "(min-width: 64em) 30vw, (min-width: 40em) 45vw, 100vw", cls = "" } = {}) {
+export function image(img, { eager = false, sizes = "(min-width: 64em) 30vw, (min-width: 40em) 45vw, 100vw", cls = "", decorative = false } = {}) {
   return html`<img class="${cls}" src="${img.src}" ${img.srcset ? raw(`srcset="${img.srcset}" sizes="${sizes}"`) : ""}
-    alt="${img.alt}" width="${img.width}" height="${img.height}"
+    alt="${decorative ? "" : img.alt}" width="${img.width}" height="${img.height}"
     ${eager ? raw('fetchpriority="high"') : raw('loading="lazy" decoding="async"')}>`;
 }
 
 /* ---------- Product card ---------- */
-export function productCard(product, { headingLevel = 3, eager = false } = {}) {
+export function productCard(product, { headingLevel = 3, eager = false, index = 0 } = {}) {
   const tag = `h${headingLevel}`;
   const main = product.images[0];
-  return html`<article class="product-card">
+  return html`<article class="product-card" data-reveal style="--d:${index}">
     <a class="product-card__media" href="${productUrl(product)}" tabindex="-1" aria-hidden="true">
-      ${image(main, { eager })}
+      ${image(main, { eager, decorative: true })}
+      <span class="product-card__badge">${product.tier}</span>
     </a>
     <div class="product-card__body">
-      <p class="product-card__tier">${product.tier}</p>
       ${raw(`<${tag} class="product-card__title">`)}<a href="${productUrl(product)}">${product.name}</a>${raw(`</${tag}>`)}
       ${priceTag(product)}
       <p class="product-card__desc">${product.shortDescription}</p>
-      <div class="product-card__actions">
-        ${button({ href: productUrl(product), label: "View details", variant: "secondary" })}
-      </div>
+      <p class="product-card__more"><a href="${productUrl(product)}" class="link-arrow" tabindex="-1" aria-hidden="true">View details ${icons.arrow}</a></p>
     </div>
   </article>`;
 }
 
 export function productGrid(list = products, opts = {}) {
-  return html`<div class="product-grid">${list.map((p, i) => productCard(p, { ...opts, eager: opts.eager && i === 0 }))}</div>`;
+  return html`<div class="product-grid">${list.map((p, i) => productCard(p, { ...opts, index: i, eager: opts.eager && i === 0 }))}</div>`;
 }
 
 export function madeToOrderNotice() {
-  return html`<aside class="notice" aria-label="Made to order">
+  return html`<aside class="notice" aria-label="Made to order" data-reveal>
     <p><strong>Every bouquet is made to order.</strong> Lead times vary with the design and how busy we are — we'll confirm timing, final price and delivery or collection before you pay.</p>
   </aside>`;
 }
@@ -122,23 +143,28 @@ export function header(currentPath) {
   const isCurrent = (href) => (href === "/" ? currentPath === "/" : currentPath.startsWith(href));
   const brand = site.logo
     ? html`<img src="${site.logo}" alt="${brandName()}" class="brand__logo" width="160" height="40">`
-    : html`<span class="brand__name">${shortName()}</span>`;
+    : html`<span class="brand__mark" aria-hidden="true">${icons.rose}</span><span class="brand__name">${shortName()}</span>`;
   return html`<a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="brand" href="/" ${currentPath === "/" ? raw('aria-current="page"') : ""}>${brand}</a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="nav-toggle__open">${icons.menu}</span><span class="nav-toggle__close">${icons.close}</span>
-        <span class="nav-toggle__label">Menu</span>
-      </button>
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <ul class="site-nav__list">
           ${navItems.map(
-            (item) =>
-              html`<li><a href="${item.href}" ${isCurrent(item.href) ? raw('aria-current="page"') : ""}>${item.label}</a></li>`
+            (item, i) =>
+              html`<li style="--d:${i}"><a href="${item.href}" ${isCurrent(item.href) ? raw('aria-current="page"') : ""}>${item.label}</a></li>`
           )}
         </ul>
+        <div class="site-nav__extra">
+          <p class="script" aria-hidden="true">made by hand</p>
+          <p class="small">Handmade satin ribbon bouquets · ${site.serviceArea}</p>
+        </div>
       </nav>
+      <a class="site-header__cta btn btn--primary btn--sm" href="/custom-orders/#enquiry">Order a bouquet</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__label">Menu</span>
+        <span class="nav-toggle__icon" aria-hidden="true"><span></span><span></span></span>
+      </button>
     </div>
   </header>`;
 }
@@ -148,6 +174,10 @@ export function footer() {
   const year = new Date().getFullYear();
   const socials = socialLinks();
   return html`<footer class="site-footer">
+    <div class="site-footer__sign" aria-hidden="true">
+      <span class="site-footer__word site-footer__word--a">made</span>
+      <span class="site-footer__word site-footer__word--b script">by hand</span>
+    </div>
     <div class="container site-footer__grid">
       <div class="site-footer__brand">
         <p class="site-footer__name">${brandName()}</p>

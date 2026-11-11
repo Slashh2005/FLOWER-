@@ -23,7 +23,7 @@ After each build you get a **"Still to set up before launch"** checklist showing
 | Business name, logo, tagline, WhatsApp number, email, social links, service area, hours, delivery, collection and payment policies, form service | `src/config/site.js` |
 | Products, prices, sizes, colours, lead times, photos | `src/data/products.js` |
 | Occasions, benefits, ordering steps, FAQ, About story, seasonal banner, **real** reviews | `src/data/content.js` |
-| Colours, fonts, spacing, corner radius (design tokens) | top of `src/assets/css/styles.css` |
+| Colours, fonts (including the script accent font), spacing, corner radius (design tokens) | top of `src/assets/css/styles.css` |
 | Favicon | `src/static/favicon.svg` |
 | Social sharing image (1200×630) | `src/assets/img/og-image.png` |
 
@@ -55,6 +55,14 @@ The reviews section is hidden until `reviews` in `content.js` has entries. Only 
 3. Replace the placeholder photos, the about story and the FAQ answers marked `[ … ]`.
 4. Set `showSetupMarkers: false`.
 5. Run `npm test`, then deploy the `dist/` folder.
+
+## Motion and animation
+The home page has scroll-linked scenes: the dark panel rises over the hero as an arch, a sticky picture frame swaps bouquets as you scroll the list, the "How ordering works" section pins and slides sideways, a picture opens like a window, gift tags spread out of a pile, and the footer words slide together. Headings and cards rise in as they come into view.
+
+- It's all plain CSS (scroll-driven animations) plus a small script for the rise-in effects. No animation library.
+- In browsers without scroll-driven animation support, and for visitors who've turned on *reduce motion*, the same content shows without the movement.
+- The scenes are under **SCROLL SCENES** near the end of `src/assets/css/styles.css`, and each section on the home page (`src/pages/home.js`) is commented.
+- The pinned steps section works out its length from the number of steps in `content.js`, so you can add or remove steps freely.
 
 ## Hosting
 Any static host will do. Set the build command to `npm run build` and the output folder to `dist`. `404.html` is generated, and so is `sitemap.xml` once you set `siteUrl`.

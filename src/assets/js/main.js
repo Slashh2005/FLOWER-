@@ -8,33 +8,59 @@
     config = JSON.parse(document.getElementById("site-config").textContent);
   } catch (e) {}
 
-  /* ---------- Mobile navigation ---------- */
+  /* ---------- Mobile navigation (full-screen menu) ---------- */
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.getElementById("site-nav");
   if (toggle && nav) {
+    var isOpen = function () { return toggle.getAttribute("aria-expanded") === "true"; };
     var setOpen = function (open, returnFocus) {
       toggle.setAttribute("aria-expanded", String(open));
       nav.classList.toggle("is-open", open);
+      document.body.classList.toggle("nav-open", open);
       toggle.querySelector(".nav-toggle__label").textContent = open ? "Close" : "Menu";
       if (!open && returnFocus) toggle.focus();
     };
     toggle.addEventListener("click", function () {
-      var open = toggle.getAttribute("aria-expanded") !== "true";
+      var open = !isOpen();
       setOpen(open);
       if (open) {
         var first = nav.querySelector("a");
-        if (first) first.focus();
+        if (first) setTimeout(function () { first.focus(); }, 50);
       }
     });
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") setOpen(false, true);
+      if (!isOpen()) return;
+      if (e.key === "Escape") return setOpen(false, true);
+      // Keep keyboard focus inside the open menu (links + close button)
+      if (e.key === "Tab") {
+        var items = Array.prototype.slice.call(nav.querySelectorAll("a")).concat(toggle);
+        var i = items.indexOf(document.activeElement);
+        if (e.shiftKey && i <= 0) { e.preventDefault(); items[items.length - 1].focus(); }
+        else if (!e.shiftKey && i === items.length - 1) { e.preventDefault(); items[0].focus(); }
+      }
     });
-    document.addEventListener("click", function (e) {
-      if (toggle.getAttribute("aria-expanded") === "true" && !nav.contains(e.target) && !toggle.contains(e.target)) setOpen(false);
-    });
-    var mq = window.matchMedia("(min-width: 52.01em)");
-    var onChange = function () { if (mq.matches) setOpen(false); };
+    nav.addEventListener("click", function (e) { if (e.target.closest("a")) setOpen(false); });
+    var mq = window.matchMedia("(min-width: 60.01em)");
+    var onChange = function () { if (mq.matches && isOpen()) setOpen(false); };
     mq.addEventListener ? mq.addEventListener("change", onChange) : mq.addListener(onChange);
+  }
+
+  /* ---------- Header edge once the page scrolls ---------- */
+  var onScroll = function () { document.body.classList.toggle("is-scrolled", window.scrollY > 8); };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  /* ---------- Reveal on scroll ---------- */
+  var reveals = document.querySelectorAll("[data-reveal]");
+  if (document.documentElement.classList.contains("motion") && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { entry.target.classList.add("is-in"); io.unobserve(entry.target); }
+      });
+    }, { rootMargin: "0px 0px -12% 0px" });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add("is-in"); });
   }
 
   /* ---------- Enquiry forms ---------- */
